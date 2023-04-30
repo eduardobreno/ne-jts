@@ -1,0 +1,15 @@
+# src/graphql/users.query.graphql
+
+query GetAllUsers {
+  allUsers {
+    name
+    email
+  }
+}
+
+mutation AddNewUser($email: String!, $name: String!) {
+  signupUser(data: { email: $email, name: $name }) {
+    name
+    email
+  }
+}

@@ -6,7 +6,8 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "codegen": "graphql-codegen"
   },
   "dependencies": {
     "@apollo/client": "3.7.12",
@@ -16,10 +17,14 @@
     "next-pwa": "5.6.0",
     "react": "18.2.0",
     "react-dom": "18.2.0",
-    "sass": "1.62.0",
-    "ui": "*"
+    "sass": "1.62.0"
   },
   "devDependencies": {
+    "@graphql-codegen/cli": "3.3.1",
+    "@graphql-codegen/near-operation-file-preset": "2.5.0",
+    "@graphql-codegen/typed-document-node": "4.0.1",
+    "@graphql-codegen/typescript": "3.0.4",
+    "@graphql-codegen/typescript-operations": "3.0.4",
     "@myapp/eslint-config-custom": "*",
     "@myapp/tsconfig": "*",
     "@types/node": "17.0.4",
