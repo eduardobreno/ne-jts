@@ -11,25 +11,15 @@ import {
   Field,
 } from '@nestjs/graphql';
 import { Inject } from '@nestjs/common';
-import { Post } from './post';
 import { User } from './user';
 import { PrismaService } from './prisma.service';
-
-@InputType()
-class UserUniqueInput {
-  @Field({ nullable: true })
-  id: number;
-
-  @Field({ nullable: true })
-  email: string;
-}
 
 @InputType()
 class UserCreateInput {
   @Field()
   email: string;
 
-  @Field({ nullable: true })
+  @Field()
   name: string;
 }
 

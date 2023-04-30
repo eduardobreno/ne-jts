@@ -2,27 +2,10 @@
 # THIS FILE WAS AUTOMATICALLY GENERATED (DO NOT MODIFY)
 # ------------------------------------------------------
 
-type Post {
-  id: Int!
-  createdAt: Timestamp!
-  updatedAt: Timestamp!
-  title: String!
-  content: String
-  published: Boolean
-  viewCount: Int!
-  author: User
-}
-
-"""
-`Date` type as integer. Type represents date and time as number of milliseconds from start of UNIX epoch.
-"""
-scalar Timestamp
-
 type User {
   id: Int!
   email: String!
-  name: String
-  posts: [Post!]
+  name: String!
 }
 
 type Query {
@@ -35,5 +18,5 @@ type Mutation {
 
 input UserCreateInput {
   email: String!
-  name: String
+  name: String!
 }

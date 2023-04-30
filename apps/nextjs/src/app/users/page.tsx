@@ -7,7 +7,6 @@ import { QUERY_ALL_USERS } from "../../query/users";
 export default function Page() {
   const { data } = useQuery(QUERY_ALL_USERS, { fetchPolicy: "network-only" });
 
-  console.log("data", data);
   return (
     <article>
       <Link href="/users/add" role="button">

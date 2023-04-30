@@ -20,11 +20,11 @@
     "ui": "*"
   },
   "devDependencies": {
+    "@myapp/eslint-config-custom": "*",
+    "@myapp/tsconfig": "*",
     "@types/node": "17.0.4",
     "@types/react": "18.0.11",
     "@types/react-dom": "18.0.11",
-    "eslint-config-custom": "*",
-    "tsconfig": "*",
     "typescript": "5.0.4"
   }
 }
