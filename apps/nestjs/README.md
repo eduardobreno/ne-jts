@@ -3,8 +3,8 @@
 This example shows how to implement an **GraphQL server (code-first) with TypeScript** with the following stack:
 
 - [NestJS](https://docs.nestjs.com/graphql/quick-start): Web framework for building scalable server-side applications
-- [**Prisma Client**](https://www.prisma.io/docs/concepts/components/prisma-client): Databases access (ORM)                  
-- [**Prisma Migrate**](https://www.prisma.io/docs/concepts/components/prisma-migrate): Database migrations               
+- [**Prisma Client**](https://www.prisma.io/docs/concepts/components/prisma-client): Databases access (ORM)
+- [**Prisma Migrate**](https://www.prisma.io/docs/concepts/components/prisma-migrate): Database migrations
 - [**SQLite**](https://www.sqlite.org/index.html): Local, file-based SQL database
 
 The example was bootstrapped using the NestJS CLI command `nest new graphql-nestjs`.
@@ -23,7 +23,7 @@ Install npm dependencies:
 
 ```
 cd graphql-nestjs
-npm install
+yarn install
 ```
 
 <details><summary><strong>Alternative:</strong> Clone the entire repo</summary>
@@ -38,7 +38,7 @@ Install npm dependencies:
 
 ```
 cd prisma-examples/typescript/graphql-nestjs
-npm install
+yarn install
 ```
 
 </details>
@@ -59,7 +59,7 @@ When `npx prisma migrate dev` is executed against a newly created database, seed
 Launch your GraphQL server with this command:
 
 ```
-npm run dev
+yarn dev
 ```
 
 Navigate to [http://localhost:3000/graphql](http://localhost:3000/graphql) in your browser to explore the API of your GraphQL server in a [GraphQL Playground](https://github.com/prisma/graphql-playground).
@@ -294,8 +294,8 @@ model Post {
 }
 
 model User {
-  id      Int      @default(autoincrement()) @id 
-  name    String? 
+  id      Int      @default(autoincrement()) @id
+  name    String?
   email   String   @unique
   posts   Post[]
 + profile Profile?

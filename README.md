@@ -1,4 +1,4 @@
-# Nextjs + Nestjs (Prisma|Graphql)
+# Turborepo + Nextjs + Nestjs (Prisma|Graphql)
 
 
 Nextjs based on turbo in this example: https://turbo.build/repo/docs/getting-started/create-new
