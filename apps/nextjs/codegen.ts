@@ -4,12 +4,16 @@ const config: CodegenConfig = {
   schema: "../nestjs/src/schema.gql",
   documents: "./src/graphql/*.graphql",
   generates: {
-    "src/graphql/types.ts": {
+    "src/graphql/generated/types.ts": {
       plugins: ["typescript"],
     },
     "./src/graphql/": {
       preset: "near-operation-file",
-      presetConfig: { extension: ".generated.ts", baseTypesPath: "types.ts" },
+      presetConfig: {
+        folder: "generated",
+        extension: ".ts",
+        baseTypesPath: "generated/types.ts",
+      },
       plugins: ["typescript", "typescript-operations", "typed-document-node"],
       config: { withHooks: true },
     },

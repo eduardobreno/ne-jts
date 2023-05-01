@@ -4,7 +4,7 @@ import { useState } from "react";
 import { useMutation } from "@apollo/client";
 import { useRouter } from "next/navigation";
 
-import { AddNewUserDocument } from "../../../graphql/users.generated";
+import { AddNewUserDocument } from "@app/graphql/generated/users";
 
 export default function Page() {
   const router = useRouter();

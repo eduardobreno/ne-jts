@@ -2,10 +2,11 @@
 
 import { useQuery } from "@apollo/client";
 import Link from "next/link";
-import { GetAllUsersDocument, GetAllUsersQuery } from "../../graphql/users.generated";
+
+import { GetAllUsersDocument } from "@app/graphql/generated/users";
 
 export default function Page() {
-  const { data } = useQuery<GetAllUsersQuery>(GetAllUsersDocument, {
+  const { data } = useQuery(GetAllUsersDocument, {
     fetchPolicy: "network-only",
   });
 
