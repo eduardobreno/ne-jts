@@ -9,14 +9,21 @@ type User {
 }
 
 type Query {
-  allUsers: [User!]
+  """Return user data"""
+  user(id: Int!): User!
 }
 
 type Mutation {
-  signupUser(data: UserCreateInput!): User!
+  createUser(data: AddUserPayload!): User!
+  updateUser(data: UpdateUserPayload!): User!
 }
 
-input UserCreateInput {
+input AddUserPayload {
   email: String!
+  name: String!
+}
+
+input UpdateUserPayload {
+  id: Int!
   name: String!
 }

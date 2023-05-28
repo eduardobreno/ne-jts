@@ -1,13 +1,15 @@
 import { CodegenConfig } from "@graphql-codegen/cli";
 
+const FRONTEND_PATH = "apps/nextjs/";
+const BACKEND_PATH = "apps/nestjs/";
+
 const config: CodegenConfig = {
-  schema: "apps/nestjs/src/schema.gql",
-  // documents: "apps/nextjs/src/graphql/*.graphql",
+  schema: [`${BACKEND_PATH}src/graphql/schema.gql`],
   generates: {
-    "apps/nextjs/src/graphql/generated/types.ts": {
+    [`${FRONTEND_PATH}src/graphql/generated/types.ts`]: {
       plugins: ["typescript"],
     },
-    "apps/nextjs/src/graphql/": {
+    [`${FRONTEND_PATH}src/graphql/`]: {
       preset: "near-operation-file",
       presetConfig: {
         folder: "generated",

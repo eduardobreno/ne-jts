@@ -12,29 +12,46 @@ export type Scalars = {
   Float: number;
 };
 
+export type AddUserPayload = {
+  email: Scalars['String'];
+  name: Scalars['String'];
+};
+
 export type Mutation = {
   __typename?: 'Mutation';
-  signupUser: User;
+  createUser: User;
+  updateUser: User;
 };
 
 
-export type MutationSignupUserArgs = {
-  data: UserCreateInput;
+export type MutationCreateUserArgs = {
+  data: AddUserPayload;
+};
+
+
+export type MutationUpdateUserArgs = {
+  data: UpdateUserPayload;
 };
 
 export type Query = {
   __typename?: 'Query';
-  allUsers?: Maybe<Array<User>>;
+  /** Return user data */
+  user: User;
+};
+
+
+export type QueryUserArgs = {
+  id: Scalars['Int'];
+};
+
+export type UpdateUserPayload = {
+  id: Scalars['Int'];
+  name: Scalars['String'];
 };
 
 export type User = {
   __typename?: 'User';
   email: Scalars['String'];
   id: Scalars['Int'];
-  name: Scalars['String'];
-};
-
-export type UserCreateInput = {
-  email: Scalars['String'];
   name: Scalars['String'];
 };
