@@ -4,12 +4,12 @@ import { useState } from "react";
 import { useMutation } from "@apollo/client";
 import { useRouter } from "next/navigation";
 
-import { AddNewUserDocument } from "@app/graphql/generated/users";
+import { AddUserDocument } from "@app/graphql/generated/users";
 
 export default function Page() {
   const router = useRouter();
 
-  const [addUser, { data, loading, error }] = useMutation(AddNewUserDocument);
+  const [addUser, { data, loading, error }] = useMutation(AddUserDocument);
 
   const [form, setForm] = useState<{ name: string; email: string }>({
     name: "",

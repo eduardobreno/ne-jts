@@ -35,6 +35,7 @@ export type MutationUpdateUserArgs = {
 
 export type Query = {
   __typename?: 'Query';
+  allUsers?: Maybe<Array<User>>;
   /** Return user data */
   user: User;
 };

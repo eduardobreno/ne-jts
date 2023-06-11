@@ -2,13 +2,23 @@
 
 query GetAllUsers {
   allUsers {
+    id
     name
     email
   }
 }
 
-mutation AddNewUser($email: String!, $name: String!) {
-  signupUser(data: { email: $email, name: $name }) {
+mutation AddUser($email: String!, $name: String!) {
+  createUser(data: { email: $email, name: $name }) {
+    id
+    name
+    email
+  }
+}
+
+mutation UpdateUser($id: Int!, $name: String!) {
+  updateUser(data: { id: $id, name: $name }) {
+    id
     name
     email
   }

@@ -119,8 +119,8 @@ export class UserResolver {
     });
   }
 
-  // @Query(() => [User], { nullable: true })
-  // async allUsers(@Context() ctx) {
-  //   return this.prismaService.user.findMany();
-  // }
+  @Query(() => [User], { nullable: true })
+  async allUsers(@Context() ctx) {
+    return this.prismaService.user.findMany();
+  }
 }

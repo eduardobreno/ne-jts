@@ -11,6 +11,7 @@ type User {
 type Query {
   """Return user data"""
   user(id: Int!): User!
+  allUsers: [User!]
 }
 
 type Mutation {
