@@ -1,2 +1,10 @@
-
 @import "@picocss/pico/scss/pico";
+
+.small {
+  padding: 0 16px;
+  width: fit-content;
+}
+
+.highlight:hover {
+  background: #cdcdcd;
+}

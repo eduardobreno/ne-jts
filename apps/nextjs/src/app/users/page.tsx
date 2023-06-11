@@ -17,7 +17,14 @@ export default function Page() {
       </Link>
       {data?.allUsers &&
         data.allUsers.map((item) => {
-          return <p key={item.name}>{item.email}</p>;
+          return (
+            <div key={item.id} className="grid highlight">
+              <span>{item.email}</span>
+              <Link className="small" href="/users/add" role="button">
+                edit
+              </Link>
+            </div>
+          );
         })}
     </article>
   );
