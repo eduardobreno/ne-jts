@@ -5,6 +5,7 @@ const BACKEND_PATH = "apps/nestjs/";
 
 const config: CodegenConfig = {
   schema: [`${BACKEND_PATH}src/graphql/schema.gql`],
+  documents: `${FRONTEND_PATH}src/graphql/*.graphql`,
   generates: {
     [`${FRONTEND_PATH}src/graphql/generated/types.ts`]: {
       plugins: ["typescript"],
