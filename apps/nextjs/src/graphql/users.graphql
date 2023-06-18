@@ -1,6 +1,12 @@
-# src/graphql/users.query.graphql
+query getUser($id: Int!) {
+  user(id: $id) {
+    id
+    name
+    email
+  }
+}
 
-query GetAllUsers {
+query getAllUsers {
   allUsers {
     id
     name
@@ -8,7 +14,7 @@ query GetAllUsers {
   }
 }
 
-mutation AddUser($email: String!, $name: String!) {
+mutation addUser($email: String!, $name: String!) {
   createUser(data: { email: $email, name: $name }) {
     id
     name
@@ -16,7 +22,7 @@ mutation AddUser($email: String!, $name: String!) {
   }
 }
 
-mutation UpdateUser($id: Int!, $name: String!) {
+mutation updateUser($id: Int!, $name: String!) {
   updateUser(data: { id: $id, name: $name }) {
     id
     name

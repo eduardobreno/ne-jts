@@ -6,6 +6,7 @@ const withPWA = require("next-pwa")({
 module.exports = {
   experimental: {
     appDir: true,
+    typedRoutes: true,
   },
   // config
 };

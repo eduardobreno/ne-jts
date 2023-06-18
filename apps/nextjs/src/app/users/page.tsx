@@ -19,8 +19,13 @@ export default function Page() {
         data.allUsers.map((item) => {
           return (
             <div key={item.id} className="grid highlight">
+              <span>{item.name}</span>
               <span>{item.email}</span>
-              <Link className="small" href="/users/add" role="button">
+              <Link
+                className="small"
+                href={`/users/edit?id=${item.id}`}
+                role="button"
+              >
                 edit
               </Link>
             </div>
